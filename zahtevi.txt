@@ -1,0 +1,25 @@
+treba biti moguce uneti par kljuc vrednost koji ce "negde" biti sacuvani
+kljuc i vrednost treba da budu sigurni
+odnosno kljuc bi trebalo hesirati, a vrednost enkriptovati radi mogucnosti iscitavanja
+cuvati sve u jednom fajlu, ili imati folder pa praviti fajlove sa imenom hesa kljuca? 
+proveriti sta je brze
+traziti master key za komande koje otkrivaju informacije o kljucevima ili menjaju neku vrednost
+dodaju/brisu kljuc
+
+napraviti hendler koji cuva promene na one drive-u
+pri svakom update-u trazi kredencijale korisnika
+
+
+
+
+hasher - DONE
+encryptor - DONE
+
+kredencijali se cuvaju u credential manageru 
+enkripcija radi
+
+napraviti komandu za edit
+
+
+
+
