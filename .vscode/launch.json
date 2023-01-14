@@ -12,7 +12,7 @@
       "program": "${workspaceFolder}",
       "host": "127.0.0.1",
       "env": {},
-      "args": [],
+      "args": ["store", "--key", "trial", "--pass", "trial4"],
       "showLog": true,
       "console": "externalTerminal"
     }

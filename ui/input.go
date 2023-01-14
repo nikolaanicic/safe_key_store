@@ -4,22 +4,20 @@ import (
 	"fmt"
 	"safe_key_store/passmanager"
 	"strings"
+	"syscall"
+
+	"golang.org/x/term"
 )
 
 // asks the user to enter the master password
-func askMasterPassword() string {
-	pass := ""
+func askMasterPassword() (string,error) {
+	fmt.Println("Please enter the master password:")
+	pass, err := term.ReadPassword(int(syscall.Stdin))
 
-	for pass == ""{
-		fmt.Println("Please enter the admin password:")
-		fmt.Scanf("%s",&pass)
-		if err := validateInput(pass); err != nil{
-			fmt.Println(err)
-			pass = ""
-		}
+	if err != nil{
+		return "", err
 	}
-
-	return pass
+	return string(pass),nil
 }
 
 // checks the master passwrod entered by the user
